@@ -1,0 +1,21 @@
+{
+    "name": "app2641/aws-client-manager-for-php",
+    "authors": [{
+        "name": "app2641",
+        "homepage": "http://app2641.com"
+    }],
+    "require": {
+        "php": ">=5.3",
+        "aws/aws-sdk-php": "*",
+        "satooshi/php-coveralls": "*"
+    },
+    "config":{
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-0": {
+            "Acm": "src/"
+        }
+    },
+    "license": "BSD-3-Clause"
+}
