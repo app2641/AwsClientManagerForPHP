@@ -294,5 +294,197 @@ class AcmTest extends PHPUnit_Framework_TestCase
         $emr = Acm::getEmr();
         $this->assertInstanceOf('Aws\Emr\EmrClient', $emr);
     }
+
+
+    /**
+     * @test
+     * @group acm-glacier
+     * @group acm
+     */
+    public function Glacierクライアントを取得する場合 ()
+    {
+        $gl = Acm::getGlacier();
+        $this->assertInstanceOf('Aws\Glacier\GlacierClient', $gl);
+    }
+
+
+    /**
+     * @test
+     * @group acm-iam
+     * @group acm
+     */
+    public function Iamクライアントを取得する場合 ()
+    {
+        $iam = Acm::getIam();
+        $this->assertInstanceOf('Aws\Iam\IamClient', $iam);
+    }
+
+
+    /**
+     * @test
+     * @group acm-kinesis
+     * @group acm
+     */
+    public function Kinesisクライアントを取得する場合 ()
+    {
+        $kinesis = Acm::getKinesis();
+        $this->assertInstanceOf('Aws\Kinesis\KinesisClient', $kinesis);
+    }
+
+
+    /**
+     * @test
+     * @group acm-opsworks
+     * @group acm
+     */
+    public function OpsWorksクライアントを取得する場合 ()
+    {
+        $ow = Acm::getOpsWorks();
+        $this->assertInstanceOf('Aws\OpsWorks\OpsWorksClient', $ow);
+    }
+
+
+    /**
+     * @test
+     * @group acm-rds
+     * @group acm
+     */
+    public function Rdsクライアントを取得する場合 ()
+    {
+        $rds = Acm::getRds();
+        $this->assertInstanceOf('Aws\Rds\RdsClient', $rds);
+    }
+
+
+    /**
+     * @test
+     * @group acm-redshift
+     * @group acm
+     */
+    public function Reshiftクライアントを取得する場合 ()
+    {
+        $rs = Acm::getRedshift();
+        $this->assertInstanceOf('Aws\Redshift\RedshiftClient', $rs);
+    }
+
+
+    /**
+     * @test
+     * @group acm-route53
+     * @group
+     */
+    public function Route53クライアントを取得する場合 ()
+    {
+        $route = Acm::getRoute53();
+        $this->assertInstanceOf('Aws\Route53\Route53Client', $route);
+    }
+
+
+    /**
+     * @test
+     * @group acm-s3
+     * @group acm
+     */
+    public function S3クライアントを取得する場合 ()
+    {
+        $s3 = Acm::getS3();
+        $this->assertInstanceOf('Aws\S3\S3Client', $s3);
+    }
+
+
+    /**
+     * @test
+     * @group acm-ses
+     * @group acm
+     */
+    public function Sesクライアントを取得する場合 ()
+    {
+        $ses = Acm::getSes();
+        $this->assertInstanceOf('Aws\Ses\SesClient', $ses);
+    }
+
+
+    /**
+     * @test
+     * @group acm-simple-db
+     * @group acm
+     */
+    public function SimpleDbクライアントを取得する場合 ()
+    {
+        $sd = Acm::getSimpleDb();
+        $this->assertInstanceOf('Aws\SimpleDb\SimpleDbClient', $sd);
+    }
+
+
+    /**
+     * @test
+     * @group acm-sns
+     * @group acm
+     */
+    public function Snsクライアントを取得する場合 ()
+    {
+        $sns = Acm::getSns();
+        $this->assertInstanceOf('Aws\Sns\SnsClient', $sns);
+    }
+
+
+    /**
+     * @test
+     * @gorup acm-sqs
+     * @group acm
+     */
+    public function Sqsクライアントを取得する場合 ()
+    {
+        $sqs = Acm::getSqs();
+        $this->assertInstanceOf('Aws\Sqs\SqsClient', $sqs);
+    }
+
+
+    /**
+     * @test
+     * @group acm-storage-gateway
+     * @group acm
+     */
+    public function StorageGatewayクライアントを取得する場合 ()
+    {
+        $sg = Acm::getStorageGateway();
+        $this->assertInstanceOf('Aws\StorageGateway\StorageGatewayClient', $sg);
+    }
+
+
+    /**
+     * @test
+     * @group acm-sts
+     * @group acm
+     */
+    public function Stsクライアントを取得する場合 ()
+    {
+        $sts = Acm::getSts();
+        $this->assertInstanceOf('Aws\Sts\StsClient', $sts);
+    }
+
+
+    /**
+     * @test
+     * @group acm-support
+     * @group acm
+     */
+    public function Supportクライアントを取得する場合 ()
+    {
+        $support = Acm::getSupport();
+        $this->assertInstanceOf('Aws\Support\SupportClient', $support);
+    }
+
+
+    /**
+     * @test
+     * @group acm-swf
+     * @group acm
+     */
+    public function Swfクライアントを取得する場合 ()
+    {
+        $swf = Acm::getSwf();
+        $this->assertInstanceOf('Aws\Swf\SwfClient', $swf);
+    }
 }
 

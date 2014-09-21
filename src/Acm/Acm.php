@@ -17,6 +17,22 @@ use Aws\ElasticBeanstalk\ElasticBeanstalkClient;
 use Aws\ElasticLoadBalancing\ElasticLoadBalancingClient;
 use Aws\ElasticTranscoder\ElasticTranscoderClient;
 use Aws\Emr\EmrClient;
+use Aws\Glacier\GlacierClient;
+use Aws\Iam\IamClient;
+use Aws\Kinesis\KinesisClient;
+use Aws\OpsWorks\OpsWorksClient;
+use Aws\Rds\RdsClient;
+use Aws\Redshift\RedshiftClient;
+use Aws\Route53\Route53Client;
+use Aws\S3\S3Client;
+use Aws\Ses\SesClient;
+use Aws\SimpleDb\SimpleDbClient;
+use Aws\Sns\SnsClient;
+use Aws\Sqs\SqsClient;
+use Aws\StorageGateway\StorageGatewayClient;
+use Aws\Sts\StsClient;
+use Aws\Support\SupportClient;
+use Aws\Swf\SwfClient;
 
 class Acm
 {
@@ -206,6 +222,176 @@ class Acm
     {
         $config = self::getConfig($config);
         return EmrClient::factory($config);
+    }
+
+
+    /**
+     * @return GlacierClient
+     */
+    public static function getGlacier ($config = array())
+    {
+        $config = self::getConfig($config);
+        return GlacierClient::factory($config);
+    }
+
+
+    /**
+     * @return IamClient
+     */
+    public static function getIam ($config = array())
+    {
+        $config = self::getConfig($config);
+        return IamClient::factory($config);
+    }
+
+
+    /**
+     * @return KinesisClient
+     */
+    public static function getKinesis ($config = array())
+    {
+        $config = self::getConfig($config);
+        return KinesisClient::factory($config);
+    }
+
+
+    /**
+     * @return OpsWorksClient
+     */
+    public static function getOpsWorks ($config = array())
+    {
+        $config = array_merge(array(
+            'region' => \Aws\Common\Enum\Region::NORTHERN_VIRGINIA
+        ), $config);
+        $config = self::getConfig($config);
+
+        return OpsWorksClient::factory($config);
+    }
+
+
+    /**
+     * @return RdsClient
+     */
+    public static function getRds ($config = array())
+    {
+        $config = self::getConfig($config);
+        return RdsClient::factory($config);
+    }
+
+
+    /**
+     * @return RedshiftClient
+     */
+    public static function getRedshift ($config = array())
+    {
+        $config = self::getConfig($config);
+        return RedshiftClient::factory($config);
+    }
+
+
+    /**
+     * @return Route53Client
+     */
+    public static function getRoute53 ($config = array())
+    {
+        $config = self::getConfig($config);
+        return Route53Client::factory($config);
+    }
+
+
+    /**
+     * @return S3Client
+     */
+    public static function getS3 ($config = array())
+    {
+        $config = self::getConfig($config);
+        return S3Client::factory($config);
+    }
+
+
+    /**
+     * @return SesClinet
+     */
+    public static function getSes ($config = array())
+    {
+        $config = array_merge(array(
+            'region' => \Aws\Common\Enum\Region::NORTHERN_VIRGINIA
+        ), $config);
+        $config = self::getConfig($config);
+        return SesClient::factory($config);
+    }
+
+
+    /**
+     * @return SimpleDbClient
+     */
+    public static function getSimpleDb ($config = array())
+    {
+        $config = self::getConfig($config);
+        return SimpleDbClient::factory($config);
+    }
+
+
+    /**
+     * @return SnsClient
+     */
+    public static function getSns ($config = array())
+    {
+        $config = self::getConfig($config);
+        return SnsClient::factory($config);
+    }
+
+
+    /**
+     * @return SqsClient
+     */
+    public static function getSqs ($config = array())
+    {
+        $config = self::getConfig($config);
+        return SqsClient::factory($config);
+    }
+
+
+    /**
+     * @return StorageGatewayClient
+     */
+    public static function getStorageGateway ($config = array())
+    {
+        $config = self::getConfig($config);
+        return StorageGatewayClient::factory($config);
+    }
+
+
+    /**
+     * @return StsClient
+     */
+    public static function getSts ($config = array())
+    {
+        $config = self::getConfig($config);
+        return StsClient::factory($config);
+    }
+
+
+    /**
+     * @return SupportClient
+     */
+    public static function getSupport ($config = array())
+    {
+        $config = array_merge(array(
+            'region' => \Aws\Common\Enum\Region::NORTHERN_VIRGINIA
+        ), $config);
+        $config = self::getConfig($config);
+        return SupportClient::factory($config);
+    }
+
+
+    /**
+     * @return SwfClient
+     */
+    public static function getSwf ($config = array())
+    {
+        $config = self::getConfig($config);
+        return SwfClient::factory($config);
     }
 }
 
