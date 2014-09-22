@@ -44,7 +44,7 @@ Composer からインストールすることが出来る。
 ```
 {
 	"require": {
-		"app2641": "aws-client-manager"
+		"app2641/aws-client-manager": "*"
 	}
 }
 ```
